@@ -6,7 +6,7 @@
 	<style>
 		html { font-family: 'Spoqa Han Sans'; font-weight: 200;}
 		.section{height:600px;width:100%;position: relative}
-
+		#logo1{width:200px; position:relative;left:calc(50% - 100px);transition: all 1s;}
 		header{height:300px; background: white;width:100%; transition: all 0.3s}
 		header #logo{width:200px;text-align: center;height:44px;line-height: 44px;font-size: 1.5em;font-weight: 700;position:relative;left:calc(50% - 100px);transition: all 0.3s;color:green}
 		header #menu{width:700px;height:100px;position:relative;left:calc(50% - 350px);top:80px;transition: all 0.3s}
@@ -17,7 +17,7 @@
 		#sectionB{ background: white; transition: all 1s; }
 		#sectionC{ background: url('cactus1.jpg');background-size:100% auto;background-position: 0px -120px; }
 		#sectionD{ background: green; transition: all 1s; }
-		#sectionE{ background: purple; transition: all 1s; }
+		#sectionE{ background: white; transition: all 1s; }
 		#titleA{transition: all 1s;}
 		#titleB{transition: all 1s;}
 		#titleC{transition: all 1s;}
@@ -46,16 +46,16 @@
 	<h1 id="titleB">어서오세요, 당신의 작은 정원에</h1>
 </div>
 <div class="section" id="sectionC">
-	<h1 id="titleC">원하는 선인장을 만드세요</h1>
+	<h1 id="titleC">원하는 선인장을 만들어보세요</h1>
 </div>
 <div class="section" id="sectionD">
-	<h1 id="titleD"> 변화하는 <p> 나만의 공간을 <p> 즐기세요</h1>
+	<h1 id="titleD"> 변화하는 <p> 나만의 공간을 <p> 만들어보세요</h1>
 </div>
 <div class="section" id="sectionE">
-	<h1 id="titleE">document.documentElement.scrollTop을 통해 스크롤 높이를 받습니다.</h1>
+	<h1 id="titleE">내가 만드는 나의 공간</h1>
 </div>
 <div class="section">
-	<h1 style="color:black">FROM <P> PRIVATE GARDEN</h1>
+	<h1 style="color:green">"PRIVATE GARDEN" <P> 에서 시작해보세요</h1>
 </div>
 <script>
 	window.onscroll = function(){
@@ -80,22 +80,22 @@
 			sectionA.style.marginTop = "0px";
 		}
 		if(scrollH > 280){
-			titleA.style.paddingTop = "280px";
+			logo1.style.paddingTop = "280px";
 			menuA.style.background = "green";
 		}else{
-			titleA.style.paddingTop = "280px";
+			logo1.style.paddingTop = "280px";
 			menuA.style.background = "white";
 		}
-		if(scrollH > 680){
-			titleB.style.paddingTop = "600px";
-			titleB.style.transform = "scaleY(0)";
+		if(scrollH > 400){
+			titleB.style.paddingTop = "350px";
+			titleB.style.transform = "scaleY(1)";
 			menuB.style.background = "green";
 		}else{
-			titleB.style.paddingTop = "180px";
-			titleB.style.transform = "scaleY(1)";
+			titleB.style.paddingTop = "800px";
+			titleB.style.transform = "scaleY(0)";
 			menuB.style.background = "white";
 		}
-		if(scrollH > 1198){
+		if(scrollH > 918){
 			sectionC.style.backgroundAttachment = "fixed";
 			menuC.style.background = "green";
 		}else{
@@ -106,19 +106,21 @@
 			titleD.style.paddingTop = "300px"
 			sectionD.style.background = "Green";
 			titleD.style.color = "white";
+			titleD.style.fontWeight = "500";
 			menuD.style.background = "green";
 		}else{
 			titleD.style.paddingTop = "150px"
 			sectionD.style.background = "grey";
-			titleD.style.color = "black";
+			titleD.style.color = "white";
+			titleD.style.fontWeight = "200";
 			menuD.style.background = "white";
 		}
 		if(scrollH > 2400){
-			titleE.style.fontSize = "1.5em";
-			titleE.style.fontWeight = "700";
+			titleE.style.fontSize = "2.5em";
+			titleE.style.fontWeight = "500";
 			menuE.style.background = "green";
 		}else{
-			titleE.style.fontSize = "3em";
+			titleE.style.fontSize = "1.5em";
 			titleE.style.fontWeight = "200";
 			menuE.style.background = "white";
 		}
