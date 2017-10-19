@@ -6,18 +6,20 @@
 	<style>
 		html { font-family: 'Spoqa Han Sans'; font-weight: 200;}
 		.section{height:600px;width:100%;position: relative}
-		#logo1{width:200px; position:relative;left:calc(50% - 100px);transition: all 1s;}
 		header{height:300px; background: white;width:100%; transition: all 0.3s}
-		header #logo{width:200px;text-align: center;height:44px;line-height: 44px;font-size: 1.5em;font-weight: 700;position:relative;left:calc(50% - 100px);transition: all 0.3s;color:green}
+		header #logo{width:200px;text-align: center;height:44px;line-height: 44px;font-size: 1.5em;font-weight: 700;
+			padding-top:30px; position:relative;left:calc(50% - 100px);transition: all 0.3s;color:#416b52;}
 		header #menu{width:700px;height:100px;position:relative;left:calc(50% - 350px);top:80px;transition: all 0.3s}
-		header li{width:100px;height:100px;color:black;background: white;float:left;border-radius: 50px;text-align: center;line-height: 100px;color:black;font-size: 3em;margin-left: 20px;margin-right:20px;}
-		h1{color:green;font-size: 1.5em;text-align: center;padding-top:280px; line-height: 1.2;padding-left: 100px;padding-right: 100px;letter-spacing: -1px;}
-		h2
+		header li{width:35px;height:60px;position:relative;left:calc(50% - 188px);color:black;background: white;float:left;border-radius: 50px;text-align: center;line-height:60px;color:black;font-size: 1.5em;font-weight: 200;margin-left: 20px;margin-right:20px;margin-top:40px;}
+		h1{color:#416b52;font-size: 1.5em;font-weight: 400;text-align: center;padding-top:280px; line-height: 2;padding-left: 100px;padding-right: 100px;letter-spacing: 5px;}
 		#sectionA{ background: white; transition: all 1s; }
 		#sectionB{ background: white; transition: all 1s; }
 		#sectionC{ background: url('cactus1.jpg');background-size:100% auto;background-position: 0px -120px; }
 		#sectionD{ background: green; transition: all 1s; }
 		#sectionE{ background: white; transition: all 1s; }
+
+		#logo1{width:300px; position:relative;left:calc(50% - 150px);transition: all 1s;padding-top:80px;}
+
 		#titleA{transition: all 1s;}
 		#titleB{transition: all 1s;}
 		#titleC{transition: all 1s;}
@@ -40,7 +42,7 @@
 </header>
 <div class="section" id="sectionA">
 	<img id="logo1" src="logo1.svg">
-	<h1 id="titleA">어서오세요, 당신의 작은 정원에</h1>
+	<h1 id="titleA"> </h1>
 </div>
 <div class="section" id="sectionB">
 	<h1 id="titleB">어서오세요, 당신의 작은 정원에</h1>
@@ -49,13 +51,13 @@
 	<h1 id="titleC">원하는 선인장을 만들어보세요</h1>
 </div>
 <div class="section" id="sectionD">
-	<h1 id="titleD"> 변화하는 <p> 나만의 공간을 <p> 만들어보세요</h1>
+	<h1 id="titleD"> 나만의 공간을 <p> 다채롭게 <p> 만들어보세요</h1>
 </div>
 <div class="section" id="sectionE">
 	<h1 id="titleE">내가 만드는 나의 공간</h1>
 </div>
 <div class="section">
-	<h1 style="color:green">"PRIVATE GARDEN" <P> 에서 시작해보세요</h1>
+	<h1 style="color:#416b52">"PRIVATE GARDEN" <P> 에서 시작해보세요</h1>
 </div>
 <script>
 	window.onscroll = function(){
@@ -78,52 +80,69 @@
 			menu.style.left = "calc(50% - 350px)";
 			menu.style.top = "80px";
 			sectionA.style.marginTop = "0px";
+
 		}
+
 		if(scrollH > 280){
-			logo1.style.paddingTop = "280px";
-			menuA.style.background = "green";
+			titleA.style.paddingTop = "500px";
+			menuA.style.background = "#416b52";
+			menuA.style.color = "white";
 		}else{
-			logo1.style.paddingTop = "280px";
+			titleA.style.paddingTop = "280px";
 			menuA.style.background = "white";
+			menuA.style.color = "black";
 		}
+
 		if(scrollH > 400){
-			titleB.style.paddingTop = "350px";
+			titleB.style.paddingTop = "270px";
 			titleB.style.transform = "scaleY(1)";
-			menuB.style.background = "green";
+			menuB.style.background = "#416b52";
+			menuB.style.color = "white";
 		}else{
-			titleB.style.paddingTop = "800px";
+			titleB.style.paddingTop = "400px";
 			titleB.style.transform = "scaleY(0)";
 			menuB.style.background = "white";
+			menuB.style.color = "black";
 		}
+
 		if(scrollH > 918){
 			sectionC.style.backgroundAttachment = "fixed";
-			menuC.style.background = "green";
+			menuC.style.background = "#416b52";
+			menuC.style.color = "white";
 		}else{
 			sectionC.style.backgroundAttachment = "scroll";
 			menuC.style.background = "white";
+			menuC.style.color = "black";
 		}
-		if(scrollH > 1816){
+
+		if(scrollH > 1686){
 			titleD.style.paddingTop = "300px"
-			sectionD.style.background = "Green";
+			sectionD.style.background = "#416b52";
 			titleD.style.color = "white";
 			titleD.style.fontWeight = "500";
-			menuD.style.background = "green";
+			menuD.style.background = "#416b52";
+			menuD.style.color = "white";
 		}else{
 			titleD.style.paddingTop = "150px"
 			sectionD.style.background = "grey";
 			titleD.style.color = "white";
 			titleD.style.fontWeight = "200";
 			menuD.style.background = "white";
+			menuD.style.color = "black";
 		}
-		if(scrollH > 2400){
+
+		if(scrollH > 2200){
 			titleE.style.fontSize = "2.5em";
 			titleE.style.fontWeight = "500";
-			menuE.style.background = "green";
+			menuE.style.background = "#416b52";
+			menuE.style.color = "white";
 		}else{
 			titleE.style.fontSize = "1.5em";
 			titleE.style.fontWeight = "200";
 			menuE.style.background = "white";
+			menuE.style.color = "black";
 		}
+
 	}
 </script>
 </body>
