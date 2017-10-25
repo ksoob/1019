@@ -7,26 +7,27 @@
 		html { font-family: 'Spoqa Han Sans'; font-weight: 200;}
 		.section{height:600px;width:100%;position: relative}
 		header{height:300px; background: white;width:100%; transition: all 0.3s}
-		header #logo{width:200px;text-align: center;height:44px;line-height: 44px;font-size: 1.5em;font-weight: 700;
-			padding-top:30px; position:relative;left:calc(50% - 100px);transition: all 0.3s;color:#416b52;}
-		header #menu{width:700px;height:100px;position:relative;left:calc(50% - 350px);top:80px;transition: all 0.3s}
+		header #logo{width:200px;text-align: center;height:44px;line-height: 44px;font-size: 1.5em;font-weight: 700; padding-top:40px; position:relative;left:calc(50% - 100px);transition: all 0.3s;color:#416b52;}
+		header #menu{width:700px;height:100px;position:relative;left:calc(50% - 390px);top:80px;transition: all 0.3s}
 		header li{width:35px;height:60px;position:relative;left:calc(50% - 188px);color:black;background: white;float:left;border-radius: 50px;text-align: center;line-height:60px;color:black;font-size: 1.5em;font-weight: 200;margin-left: 20px;margin-right:20px;margin-top:40px;}
 		h1{color:#416b52;font-size: 1.5em;font-weight: 400;text-align: center;padding-top:280px; line-height: 2;padding-left: 100px;padding-right: 100px;letter-spacing: 5px;}
-		h2{color:#416b52;font-size: 0.5em;font-weight: 400;text-align: center;padding-top:20px; line-height: 2;padding-left: 10px;padding-right: 10px; padding-bottom:20px; letter-spacing: 3px;}
-		form{color:#416b52;font-size: 1.5em;font-weight: 400;text-align: center;padding-top:400px; line-height: 2;padding-left: 100px;padding-right: 100px;letter-spacing: 5px;}
+		h2{color:white;font-size: 0.5em;font-weight: 400;text-align: center;padding-top:20px; line-height: 2;padding-left: 10px;padding-right: 10px; padding-bottom:20px; letter-spacing: 3px;}
+		form{color:white;font-size: 1.5em;font-weight: 400;text-align: center;padding-top:170px; line-height: 2;padding-left: 100px;padding-right: 100px;letter-spacing: 5px;}
 		input{font-size: 0.5em;line-height: 2;margin-bottom: : 10px}
 		#sectionA{ background: white; transition: all 1s; }
 		#sectionB{ background: white; transition: all 1s; }
 		#sectionC{ background: url('cactus1.jpg');background-size:100% auto;background-position: 0px -120px; }
 		#sectionD{ background: green; transition: all 1s; }
 		#sectionE{ background: white; transition: all 1s; }
-
+        #sectionF{ background: white; transition: all 1s; }
+        #sectionG{ background:#416b52; transition: all 1s; }
 		#titleA{width:300px; position:relative;left:calc(50% - 150px);transition: all 1s;padding-top:80px;}
 
 		#titleB{transition: all 1s;}
 		#titleC{transition: all 1s;}
 		#titleD{transition: all 1s;}
 		#titleE{transition: all 1s;}
+		#titleF{transition: all 1s;}
 	</style>
 </head>
 <body>
@@ -34,11 +35,12 @@
 	<div id="logo">PRIVATE GARDEN</div>
 	<div id="menu">
 		<ul>
-			<li id="menuA">A</li>
-			<li id="menuB">B</li>
-			<li id="menuC">C</li>
-			<li id="menuD">D</li>
-			<li id="menuE">E</li>
+			<li id="menuA">1</li>
+			<li id="menuB">2</li>
+			<li id="menuC">3</li>
+			<li id="menuD">4</li>
+			<li id="menuE">5</li>
+			<li id="menuF">6</li>
 		</ul>
 	</div>
 </header>
@@ -47,6 +49,7 @@
 	
 </div>
 <div class="section" id="sectionB">
+	
 	<h1 id="titleB">어서오세요, 당신의 작은 정원에</h1>
 </div>
 <div class="section" id="sectionC">
@@ -58,17 +61,24 @@
 <div class="section" id="sectionE">
 	<h1 id="titleE">내가 만드는 나의 공간</h1>
 </div>
-<div class="section">
-	<h1 style="color:#416b52">"PRIVATE GARDEN" <P> 에서 시작해보세요</h1>
+<div class="section" id="sectionF">
+	<h1 id="titleF">"PRIVATE GARDEN" <P> 에서 시작해보세요</h1>
+</div>
+<div class="section" id="sectionG">	
 	<form>
   	SIGN UP
+  	<br>
   	<h2>
   	이메일로만 공개하는 PRIVATE GARDEN 소식을 지금 미리 신청하세요!
     </h2>
     <input type="text" placeholder="EMAIL ADDRESS">
     <h2 style="font-size: 0.7em;font-weight: 400;"><button id="action">신청</button></h2>
-</form>
-<br><br><br><br><br><br><br><br><br><br>
+    </form>
+    <br><br><br><br>
+    <h2>COPYRIGHT Ⓒ PRIVATE GARDEN 
+    </h2><h2>
+    ALL RIGHTS RESERVED / PUBLISHED BY SOO
+    </h2>
 </div>
 <script>
 	window.onscroll = function(){
@@ -105,11 +115,13 @@
 		}
 
 		if(scrollH > 400){
+			
 			titleB.style.paddingTop = "270px";
 			titleB.style.transform = "scaleY(1)";
 			menuB.style.background = "#416b52";
 			menuB.style.color = "white";
 		}else{
+			
 			titleB.style.paddingTop = "400px";
 			titleB.style.transform = "scaleY(0)";
 			menuB.style.background = "white";
@@ -153,6 +165,18 @@
 			menuE.style.background = "white";
 			menuE.style.color = "black";
 		}
+
+		if(scrollH > 2700){
+		    titleF.style.fontWeight = "500";
+			menuF.style.background = "#416b52";
+			menuF.style.color = "white";
+		}else{
+		    titleF.style.fontWeight = "500";
+			menuF.style.background = "white";
+			menuF.style.color = "black";
+		}
+		
+
 
 	}
 </script>
