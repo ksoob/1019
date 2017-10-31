@@ -6,14 +6,19 @@
 	<style>
 		html { font-family: 'Spoqa Han Sans'; font-weight: 200;}
 		.section{height:600px;width:100%;position: relative}
-		header{height:300px; background: white;width:100%; transition: all 0.3s}
-		header #logo{width:200px;text-align: center;height:44px;line-height: 44px;font-size: 1.5em;font-weight: 700; padding-top:40px; position:relative;left:calc(50% - 100px);transition: all 0.3s;color:#416b52;}
-		header #menu{width:700px;height:100px;position:relative;left:calc(50% - 390px);top:80px;transition: all 0.3s}
-		header li{width:35px;height:60px;position:relative;left:calc(50% - 188px);color:black;background: white;float:left;border-radius: 50px;text-align: center;line-height:60px;color:black;font-size: 1.5em;font-weight: 200;margin-left: 20px;margin-right:20px;margin-top:40px;}
+		header{height:400px; background: white;width:100%; transition: all 0.3s}
+		header #logo{width:200px;text-align: center;height:44px;line-height: 44px;font-size: 1.5em;font-weight: 700; padding-top:80px; position:relative;left:calc(50% - 100px);transition: all 0.3s;color:#416b52;}
+		header #menu{width:700px;height:100px;position:relative;left:calc(50% - 350px);top:80px;transition: all 0.3s;background: white;}
+		header li{width:35px;height:60px;position:relative;left:calc(50% - 225px);color:black;background: white;float:left;border-radius: 50px;text-align: center;line-height:60px;color:black;font-size: 1.5em;font-weight: 200;margin-left: 20px;margin-right:20px;margin-top:40px;}
 		h1{color:#416b52;font-size: 1.5em;font-weight: 400;text-align: center;padding-top:280px; line-height: 2;padding-left: 100px;padding-right: 100px;letter-spacing: 5px;}
 		h2{color:white;font-size: 0.5em;font-weight: 400;text-align: center;padding-top:20px; line-height: 2;padding-left: 10px;padding-right: 10px; padding-bottom:20px; letter-spacing: 3px;}
-		form{color:white;font-size: 1.5em;font-weight: 400;text-align: center;padding-top:170px; line-height: 2;padding-left: 100px;padding-right: 100px;letter-spacing: 5px;}
-		input{font-size: 0.5em;line-height: 2;margin-bottom: : 10px}
+		h3{color:white;font-size: 0.5em;font-weight: 200;text-align: center;padding-top:20px; line-height: 2;padding-left: 10px;padding-right: 10px; padding-bottom:20px; letter-spacing: 3px;}
+		h4{color:white;font-size: 0.5em;font-weight: 400;text-align: center;padding-top:20px; line-height: 1.5;padding-left: 10px;padding-right: 10px; padding-bottom:1px; letter-spacing: 3px;}
+		form{color:white;font-size: 1.5em;font-weight: 400;text-align: center;padding-top:150px; line-height: 2;padding-left: 100px;padding-right: 100px;letter-spacing: 5px;}
+		#email{height:50px;width:400px;font-size: 0.5em;text-align: center;line-height: 2;margin-bottom: : 10px; }
+		#agree{font-size: 0.5em;text-align: center;line-height: 0;margin-bottom: : 0px; }
+		button {}
+		#action {font-size: 0.5em;line-height: 2;margin-bottom: 10px; margin-top: 1px;stroke:none; }
 		#sectionA{ background: white; transition: all 1s; }
 		#sectionB{ background: white; transition: all 1s; }
 		#sectionC{ background: url('cactus1.jpg');background-size:100% auto;background-position: 0px -120px; }
@@ -71,36 +76,51 @@
   	<h2>
   	이메일로만 공개하는 PRIVATE GARDEN 소식을 지금 미리 신청하세요!
     </h2>
-    <input type="text" placeholder="EMAIL ADDRESS">
-    <h2 style="font-size: 0.7em;font-weight: 400;"><button id="action">신청</button></h2>
+    <input type="text" id="email" placeholder="EMAIL ADDRESS">
     </form>
-    <br><br><br><br>
-    <h2>COPYRIGHT Ⓒ PRIVATE GARDEN 
-    </h2><h2>
+    <h3>
+    <input type="checkbox" id="agree">
+    개인정보 수집 및 이용방침에 동의합니다.
+    </h3>
+    <h2 style="font-size: 0.7em;font-weight: 400;"><button id="action">OK</button></h2>
+    <br><br><br>
+    <h4>COPYRIGHT Ⓒ PRIVATE GARDEN 
+    </h4><h4>
     ALL RIGHTS RESERVED / PUBLISHED BY SOO
-    </h2>
+    </h4>
 </div>
 <script>
 	window.onscroll = function(){
 		console.log(document.body.scrollTop);
 		var scrollH = document.body.scrollTop;
 		if(scrollH > 50){
-			header.style.height = "44px";
+			header.style.height = "90px";
 			header.style.position = "fixed";
 			header.style.top = "0px";
 			header.style.zIndex = "9999";
-			menu.style.left = "400px";
+			header.style.background = "#416b52"
+			menu.style.left = "calc(100% - 590px)";
 			menu.style.top = "-70px";
+			menu.style.background = "#416b52"
 			logo.style.left = "0px";
+			logo.style.top = "0px";
+			logo.style.paddingTop = "0px";
+			logo.style.color = "white";
 			sectionA.style.marginTop = "44px";
+			
 		}else{
 			header.style.height = "300px";
 			header.style.position = "relative";
 			header.style.top = "0px";
+			header.style.background = "white"
 			logo.style.left = "calc(50% - 100px)";
 			menu.style.left = "calc(50% - 350px)";
 			menu.style.top = "80px";
+			menu.style.background = "white"
+			logo.style.paddingTop = "80px";
+			logo.style.color = "#416b52";
 			sectionA.style.marginTop = "0px";
+			
 
 		}
 
@@ -112,6 +132,7 @@
 			titleA.style.paddingTop = "100px";
 			menuA.style.background = "white";
 			menuA.style.color = "black";
+			menuA.style.stroke = "black";
 		}
 
 		if(scrollH > 400){
